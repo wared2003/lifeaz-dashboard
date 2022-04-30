@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {DefibrillatorService} from "../services/defibrillator.service";
+import {Defibrillator} from "../models/defibrillator.model";
 @Component({
   selector: 'app-defibrillateurs-array',
   templateUrl: './defibrillateurs-array.component.html',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefibrillateursArrayComponent implements OnInit {
 
-  constructor() { }
+  defibrillators!: Defibrillator[];
+
+  constructor(private defibrillatorService: DefibrillatorService ) { }
 
   ngOnInit(): void {
+    this.defibrillators = this.defibrillatorService.getAll()
   }
 
 }

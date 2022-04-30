@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Defibrillator} from "../models/defibrillator.model";
 
 @Component({
   selector: 'app-defibrillateurs-array-row',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./defibrillateurs-array-row.component.scss']
 })
 export class DefibrillateursArrayRowComponent implements OnInit {
+  @Input() defibrillator!: Defibrillator;
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
+
   }
 
 }

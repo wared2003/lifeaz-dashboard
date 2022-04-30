@@ -1,19 +1,21 @@
 <div class="row">
   <div class="text--bold">
-    <p>CLA012345678</p>
+    <p>{{defibrillator.serial}}</p>
   </div>
   <div class="location">
     <img src="./assets/graphique/icons/location-marker.svg" alt="icon de marqueur d'emplacement géographique ">
     <div>
-      <p class="text text--bold">Mairie d'Elattes</p>
-      <p class="text">Rue jaques prévert</p>
-      <p class="text">42980 Elattes</p>
+      <p class="text text--bold">{{defibrillator.locationName}}</p>
+      <p class="text">{{defibrillator.locationAddrStreet}}</p>
+      <p class="text">{{defibrillator.locationAddrCity}}</p>
     </div>
   </div>
   <div class="status">
-    <img src="./assets/graphique/icons/status_ok.svg" alt="icon de status du défibrallateur">
+    <img *ngIf="defibrillator.state === 0" src="./assets/graphique/icons/status_ok.svg" alt="icon de status du défibrallateur">
+    <img *ngIf="defibrillator.state === 1" src="./assets/graphique/icons/status_unknow.svg" alt="icon de status du défibrallateur">
+    <img *ngIf="defibrillator.state === 2" src="./assets/graphique/icons/status_incident.svg" alt="icon de status du défibrallateur">
   </div>
   <div class="electrodes-expiration-date text--discret">
-    <p>10.05.2025</p>
+    <p>{{defibrillator.electrodesExpiry | date : 'dd.mm.yyyy'}}</p>
   </div>
 </div>

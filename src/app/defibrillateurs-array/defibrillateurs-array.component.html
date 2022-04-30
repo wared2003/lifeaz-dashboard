@@ -6,9 +6,6 @@
     <p>date de péremption des éléctrodes</p>
   </div>
   <div class="defibrillateurs-list">
-    <app-defibrillateurs-array-row></app-defibrillateurs-array-row>
-    <app-defibrillateurs-array-row></app-defibrillateurs-array-row>
-    <app-defibrillateurs-array-row></app-defibrillateurs-array-row>
-    <app-defibrillateurs-array-row></app-defibrillateurs-array-row>
+    <app-defibrillateurs-array-row *ngFor="let defibrillator of defibrillators" [defibrillator]="defibrillator"></app-defibrillateurs-array-row>
   </div>
 </section>
