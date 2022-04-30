@@ -1,0 +1,95 @@
+//******************************************styles off navigation menu*************************************
+
+
+//import variables
+@import "../../assets/styles/helpers/variables";
+@import "../../assets/styles/components/text";
+
+
+
+nav{
+  height: 100vh;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  width: 259px;
+  background-color: $lifeaz-blue;
+
+  .header{
+    padding-top: 38px;
+    padding-left: 48px;
+    img{
+      height: 35px;
+      width: 111px;
+    }
+  }
+
+  .navigation-items{
+    width: 244px;
+    margin-left: auto;
+    height: auto;
+  }
+
+  .toggleables-nav-item-header{
+    background-color: $background-grey;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 62px;
+    width: 244px;
+    margin-top: 22px;
+    border-top-left-radius: 84px;
+    border-bottom-left-radius: 84px;
+
+    .flash-icon{
+      height: 19px;
+      width: 12px;
+      margin-left: 30px;
+    }
+    .down-arrow-icon{
+      margin-left: auto;
+      margin-right: 26px;
+    }
+
+    p{
+      @extend .text;
+      font-weight: $fw-black;
+      text-transform: uppercase;
+      margin-left: 19px;
+      font-size: 16px;
+    }
+  }
+
+
+  .toggled-items{
+    width: 210px;
+    margin-top: 16px;
+    margin-left: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-left: 2px solid #3d3dc8;
+    & > a{
+      @extend .small-title;
+      font-size: 14px;
+      display: block;
+      color: $white;
+      font-weight: $fw-regular;
+      text-transform: uppercase;
+      margin-top: 26px;
+      margin-left: 24px;
+
+
+      &.active{
+        font-weight: bold;
+      }
+    }
+    & > a:first-child{
+      margin-top: 0px;
+    }
+
+    & > a:last-child{
+      margin-bottom: 0px;
+    }
+  }
+}
+

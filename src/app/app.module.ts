@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DefibrillateursComponent } from './defibrillateurs/defibrillateurs.component';
 import { CommandesComponent } from './commandes/commandes.component';
+import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
+import { PageHeaderComponent } from './page-header/page-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DefibrillateursComponent,
-    CommandesComponent
+    CommandesComponent,
+    NavigationMenuComponent,
+    PageHeaderComponent
   ],
   imports: [
     BrowserModule,
