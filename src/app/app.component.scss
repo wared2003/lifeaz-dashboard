@@ -1,5 +1,12 @@
+@import "../assets/styles/helpers/mixins";
+
 .body-flex-container{
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
+
+  //switching to toggleable top menu on mobile
+  @include for-size-s{
+    flex-direction: column;
+  }
 }

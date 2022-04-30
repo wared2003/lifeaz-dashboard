@@ -1,6 +1,12 @@
-<nav>
+<nav [ngClass]="{'nav-open': isOpen}">
   <div class="header">
     <img src="./assets/graphique/logos/lifeaz.svg" alt="Logo de Lifeaz">
+    <label for="check">
+      <input type="checkbox" id="check" (click)="toggleMenu()"/>
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
   </div>
 
   <div class="navigation-items">
@@ -10,7 +16,7 @@
         <p>matériel</p>
         <img src="./assets/graphique/icons/downArrow.svg" alt="down arrow icon" class="down-arrow-icon">
       </div>
-        <div class="toggled-items">
+        <div class="toggled-items" id="toggledItems" [ngClass]="{'open': isOpen}">
           <a routerLink="/" class="active">défibrillateurs</a>
           <a routerLink="commandes">commandes</a>
         </div>
