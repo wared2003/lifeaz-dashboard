@@ -1,0 +1,33 @@
+.main-title{
+  color: $lifeaz-blue;
+  font-size: 25px;
+  font-weight: $fw-black;
+  line-height: 30px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.small-title{
+  font-style: normal;
+  font-weight: $fw-bold;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.327273px;
+  text-transform: uppercase;
+}
+
+.text{
+  font-style: normal;
+  font-weight: $fw-regular;
+  font-size: 14px;
+  line-height: 17px;
+  color: $text-black;
+
+  &--discret{
+    @extend .text;
+    color: $text-grey;
+  }
+}
+
+
+

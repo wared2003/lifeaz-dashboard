@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/***********************************   import   ******************************************/
+
+//import reset
+@import "./assets/styles/base/reset";
+
+//import variables
+@import "./assets/styles/helpers/variables";
+
+//import mixins
+@import "./assets/styles/helpers/mixins";
+
+//import components
+//import text-components
+@import "./assets/styles/components/text";
+
+
+//*********  general *********
+
+*{
+  font-family: $main-font-family;
+}
