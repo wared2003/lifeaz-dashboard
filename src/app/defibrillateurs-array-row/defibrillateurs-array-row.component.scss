@@ -1,0 +1,27 @@
+//import
+@import "../../assets/styles/helpers/variables";
+@import "../../assets/styles/components/text";
+
+
+.row{
+  display: grid;
+  grid-template-columns: 4fr 5fr 2fr 2.5fr;
+}
+
+.location{
+  display: flex;
+  flex-wrap: nowrap;
+
+  img{
+    height: 20px;
+    width: 16px;
+    margin-right: 18px;
+  }
+}
+
+.text--bold{
+  @extend .text;
+  font-weight: $fw-bold;
+}
+
+

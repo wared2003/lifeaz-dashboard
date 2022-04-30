@@ -1,0 +1,25 @@
+//import variables
+@import "../../assets/styles/helpers/variables";
+@import "../../assets/styles/components/text";
+
+section{
+  width: 895px;
+  border-radius: 10px;
+  padding: 38px;
+  background-color: $white;
+  margin-top: 40px;
+}
+
+.header{
+  display: grid;
+  grid-template-columns: 4fr 5fr 2fr 2.5fr;
+}
+
+.defibrillateurs-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 28px;
+  margin-top: 28px;
+
+}
