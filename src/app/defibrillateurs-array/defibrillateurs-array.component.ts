@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DefibrillatorService} from "../services/defibrillator.service";
 import {Defibrillator} from "../models/defibrillator.model";
 @Component({
@@ -6,14 +6,13 @@ import {Defibrillator} from "../models/defibrillator.model";
   templateUrl: './defibrillateurs-array.component.html',
   styleUrls: ['./defibrillateurs-array.component.scss']
 })
-export class DefibrillateursArrayComponent implements OnInit, AfterViewInit {
+export class DefibrillateursArrayComponent implements OnInit {
 
   defibrillators: Defibrillator[] = [];
 
   constructor(private defibrillatorService: DefibrillatorService ) { }
 
   ngOnInit(): void {
-    let defibrilatorArray: Defibrillator[];
     let data = this.defibrillatorService.getAll()
     data.forEach((item :Defibrillator)=>{
       let defibrillator: Defibrillator;
@@ -21,9 +20,5 @@ export class DefibrillateursArrayComponent implements OnInit, AfterViewInit {
       this.defibrillators.push(defibrillator);
     })
   };
-
-  ngAfterViewInit() {
-    console.log(this.defibrillators)
-  }
 
 }
