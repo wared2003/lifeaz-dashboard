@@ -24,13 +24,8 @@ export class Defibrillator {
     this.locationAddr = locationAddr;
     this.state = state;
     this.electrodesExpiry = electrodesExpiry;
-    try {
-      let splitedAddr: string[] = this.locationAddr.split(",");
-      this.locationAddrStreet = splitedAddr[0];
-      this.locationAddrCity = splitedAddr[1];
-    }catch (e) {
-      this.locationAddrCity = 'undefined';
-      this.locationAddrStreet = 'undefined';
-    }
+    let splitedAddr: string[] = this.locationAddr.split(",");
+    this.locationAddrStreet = splitedAddr[0];
+    this.locationAddrCity = splitedAddr[1];
   }
 }
