@@ -1,7 +1,15 @@
 //import scss
 @import "../../assets/styles/helpers/variables";
+@import "../../assets/styles/helpers/mixins";
 @import "../../assets/styles/components/text";
+
 
 section{
   max-width: 476px;
+
+  @include for-size-s{
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

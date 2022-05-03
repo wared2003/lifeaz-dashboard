@@ -10,6 +10,7 @@ import { PageHeaderComponent } from './page-header/page-header.component';
 import { DefibrillateursArrayComponent } from './defibrillateurs-array/defibrillateurs-array.component';
 import { DefibrillateursArrayRowComponent } from './defibrillateurs-array-row/defibrillateurs-array-row.component';
 import { MobileDefibrillatorCardComponent } from './mobile-defibrillator-card/mobile-defibrillator-card.component';
+import { MobileDefibrillatorsCardsArrayComponent } from './mobile-defibrillators-cards-array/mobile-defibrillators-cards-array.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MobileDefibrillatorCardComponent } from './mobile-defibrillator-card/mo
     PageHeaderComponent,
     DefibrillateursArrayComponent,
     DefibrillateursArrayRowComponent,
-    MobileDefibrillatorCardComponent
+    MobileDefibrillatorCardComponent,
+    MobileDefibrillatorsCardsArrayComponent
   ],
   imports: [
     BrowserModule,

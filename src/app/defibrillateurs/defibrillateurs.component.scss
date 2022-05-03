@@ -1,4 +1,11 @@
+@import "../../assets/styles/helpers/mixins";
+
 .defibrillateurs{
   padding-left: 65px;
   padding-top: 144px;
+
+  @include for-size-s{
+    padding-left: 0px;
+    padding-top: 100px;
+  }
 }

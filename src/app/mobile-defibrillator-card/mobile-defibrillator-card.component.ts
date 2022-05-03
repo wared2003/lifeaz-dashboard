@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Defibrillator} from "../models/defibrillator.model";
 
 @Component({
   selector: 'app-mobile-defibrillator-card',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mobile-defibrillator-card.component.scss']
 })
 export class MobileDefibrillatorCardComponent implements OnInit {
+  @Input() defibrillator!: Defibrillator
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

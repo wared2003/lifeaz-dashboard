@@ -1,4 +1,9 @@
 <section class="defibrillateurs">
   <app-page-header [pageHeader]="pageHeader"></app-page-header>
+
+<!--  defibrilator array display if width > 1265px-->
   <app-defibrillateurs-array class="defibrillateurs-array" *ngIf="! isMobile"></app-defibrillateurs-array>
+
+  <!-- defibrilator cards display if width < 1265px-->
+  <app-mobile-defibrillators-cards-array  *ngIf="isMobile"></app-mobile-defibrillators-cards-array>
 </section>

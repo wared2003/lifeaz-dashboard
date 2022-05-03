@@ -1,1 +1,12 @@
-<p>mobile-defibrillator-card works!</p>
+<div class="card">
+  <div>
+    <p class="serial">{{defibrillator.serial}}</p>
+    <p class="location-name">{{defibrillator.locationName}}</p>
+    <p class="location-addr">{{defibrillator.locationAddr}}</p>
+  </div>
+  <div class="status">
+    <img *ngIf="defibrillator.state === 0" src="./assets/graphique/icons/status_ok.svg" alt="icon de status du défibrallateur">
+    <img *ngIf="defibrillator.state === 1" src="./assets/graphique/icons/status_unknow.svg" alt="icon de status du défibrallateur">
+    <img *ngIf="defibrillator.state === 2" src="./assets/graphique/icons/status_incident.svg" alt="icon de status du défibrallateur">
+  </div>
+</div>

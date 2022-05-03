@@ -1,0 +1,13 @@
+@import "../../assets/styles/helpers/mixins";
+
+
+section{
+  width: 100%;
+  justify-items: flex-start;
+  align-items: center;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}

@@ -9,8 +9,8 @@
     </label>
   </div>
 
-  <div class="navigation-items">
-    <div class="toggleables-nav-item">
+  <div class="navigation-items" [ngClass]="{'nav-open': isOpen}">
+    <div class="toggleables-nav-item" >
       <div class="toggleables-nav-item-header">
         <img src="./assets/graphique/icons/flash.svg" alt="electricity flash icon" class="flash-icon">
         <p>matériel</p>

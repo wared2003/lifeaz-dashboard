@@ -1,0 +1,29 @@
+//import
+@import "../../assets/styles/helpers/variables";
+@import "../../assets/styles/components/text";
+
+.card {
+  width: 320px;
+  height: auto;
+  padding: 26px 23px 20px 23px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $white;
+  border-radius: 15px;
+}
+
+.serial{
+  font-size: 16px;
+  font-weight: $fw-bold;
+  margin-bottom: 15px;
+  color: $text-black
+}
+.location-name{
+  @extend .text;
+  font-weight: $fw-black;
+}
+.location-addr{
+  @extend .text;
+}

@@ -2,6 +2,7 @@ label{
   display:flex;
   flex-direction:column;
   width:70px;
+  height: 70px;
   cursor:pointer;
   transform: scale(0.5);
 
@@ -12,8 +13,7 @@ label span{
   border-radius:10px;
   height:7px;
   margin: 7px 0;
-  transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
-
+  transition: .4s;
 }
 
 
@@ -29,7 +29,6 @@ span:nth-of-type(2){
 
 span:nth-of-type(3){
   width:75%;
-
 }
 
 
@@ -45,7 +44,6 @@ input[type="checkbox"]:checked ~ span:nth-of-type(1){
 
 
 input[type="checkbox"]:checked ~ span:nth-of-type(2){
-
   transform-origin:top;
   transform:rotatez(-45deg)
 }

@@ -18,7 +18,7 @@ export class DefibrillateursComponent implements OnInit, AfterViewInit{
   constructor() { }
 
   ngOnInit(): void {
-    if (window.innerWidth < 767) { // 768px portrait
+    if (window.innerWidth < 1050) {
       this.isMobile = true;
     }else
       this.isMobile = false;
@@ -27,8 +27,7 @@ export class DefibrillateursComponent implements OnInit, AfterViewInit{
 /*check if the screen is mobile on resize event and change the isMobile variable  to true  or false*/
   ngAfterViewInit(): void {
     window.addEventListener("resize", () => {
-      console.log("resize" + window.innerWidth);
-      if (window.innerWidth < 767) { // 767px portrait
+      if (window.innerWidth < 1050) {
         this.isMobile = true;
       }else
         this.isMobile = false;

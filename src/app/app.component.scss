@@ -10,3 +10,11 @@
     flex-direction: column;
   }
 }
+
+
+app-navigation-menu {
+  @media (min-width: 767px) and (max-width: 1265px) {
+    width: 50px;
+  }
+}
+

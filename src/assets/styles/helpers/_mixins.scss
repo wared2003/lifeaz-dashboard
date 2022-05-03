@@ -1,3 +1,8 @@
 @mixin for-size-s {
   @media screen and (max-width: 767px) { @content; }
 }
+
+@mixin for-size-medium {
+  @media screen and (max-width: 1265px) { @content; }
+}
+
