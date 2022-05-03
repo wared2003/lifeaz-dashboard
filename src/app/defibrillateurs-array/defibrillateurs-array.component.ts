@@ -12,13 +12,18 @@ export class DefibrillateursArrayComponent implements OnInit {
 
   constructor(private defibrillatorService: DefibrillatorService ) { }
 
-  ngOnInit(): void {
-    let data = this.defibrillatorService.getAll()
-    data.forEach((item :Defibrillator)=>{
-      let defibrillator: Defibrillator;
-      defibrillator = new Defibrillator(item.serial, item.locationName, item.locationAddr, item.state, item.electrodesExpiry);
-      this.defibrillators.push(defibrillator);
+  ngOnInit(){
+    let data: Defibrillator[] = [];
+   return this.defibrillatorService.getAll().subscribe((items: Defibrillator[]) => {
+      data = items;
+      console.log(data);
+      data.forEach((item :Defibrillator)=>{
+       let defibrillator: Defibrillator;
+       defibrillator = new Defibrillator(item.serial, item.locationName, item.locationAddr, item.state, item.electrodesExpiry);
+       this.defibrillators.push(defibrillator);
+     })
     })
+
   };
 
 }

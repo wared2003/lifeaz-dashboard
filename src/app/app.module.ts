@@ -11,6 +11,7 @@ import { DefibrillateursArrayComponent } from './defibrillateurs-array/defibrill
 import { DefibrillateursArrayRowComponent } from './defibrillateurs-array-row/defibrillateurs-array-row.component';
 import { MobileDefibrillatorCardComponent } from './mobile-defibrillator-card/mobile-defibrillator-card.component';
 import { MobileDefibrillatorsCardsArrayComponent } from './mobile-defibrillators-cards-array/mobile-defibrillators-cards-array.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MobileDefibrillatorsCardsArrayComponent } from './mobile-defibrillators
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

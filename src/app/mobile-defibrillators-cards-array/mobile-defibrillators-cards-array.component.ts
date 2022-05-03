@@ -13,8 +13,10 @@ export class MobileDefibrillatorsCardsArrayComponent implements OnInit {
 
   constructor(private defibrillatorService: DefibrillatorService) { }
 
-  ngOnInit(): void {
-    this.defibrillators = this.defibrillatorService.getAll()
+  ngOnInit(){
+    return this.defibrillatorService.getAll().subscribe((items: Defibrillator[]) => {
+      this.defibrillators = items;
+    })
   }
 
 }
