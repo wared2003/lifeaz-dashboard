@@ -37,6 +37,7 @@ export class DefibrillateursArrayComponent implements OnInit {
     return this.defibrillators.filter(defibrillator => defibrillator.state === status);
   }
 
+
 /*toggle this.filterActive*/
   onFilterClick(){
     this.filterActive = !this.filterActive;

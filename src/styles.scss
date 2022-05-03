@@ -15,6 +15,9 @@
 
 
 //*********  general *********
+html {
+  scroll-behavior: smooth;
+}
 
 *{
   font-family: $main-font-family;

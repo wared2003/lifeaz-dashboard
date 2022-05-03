@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DefibrillateursArrayComponent } from './defibrillateurs-array.component';
 
 describe('DefibrillateursArrayComponent', () => {
