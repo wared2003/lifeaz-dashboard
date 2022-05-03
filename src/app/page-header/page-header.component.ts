@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {PageHeader} from "../models/page-header.model";
 
 @Component({
@@ -6,13 +6,8 @@ import {PageHeader} from "../models/page-header.model";
   templateUrl: './page-header.component.html',
   styleUrls: ['./page-header.component.scss']
 })
-export class PageHeaderComponent implements OnInit {
+export class PageHeaderComponent{
 
   @Input() pageHeader!: PageHeader;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

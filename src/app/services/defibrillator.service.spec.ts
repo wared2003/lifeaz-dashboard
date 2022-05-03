@@ -1,16 +1,104 @@
-import { TestBed } from '@angular/core/testing';
+import { DefibrillatorService} from "./defibrillator.service";
+import {HttpClient} from "@angular/common/http";
+import {Defibrillator} from "../models/defibrillator.model";
+import {of} from 'rxjs';
 
-import { DefibrillatorService } from './defibrillator.service';
+let httpClientSpy: jasmine.SpyObj<HttpClient>;
+let defibrillatorService: DefibrillatorService;
 
-describe('DefibrillatorService', () => {
-  let service: DefibrillatorService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(DefibrillatorService);
-  });
+//faking api
+beforeEach(() => {
+  httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
+  defibrillatorService = new DefibrillatorService(httpClientSpy);
+});
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+
+//test the api call function for get all
+it('should return expected Deffibrillators (HttpClient called once)', (done: DoneFn) => {
+  const expectedDefibrillators: Defibrillator[] =
+    [
+      {
+        "serial": "CLA012345678",
+        "locationName": "Mairie d'Elattes",
+        "locationAddr": "12 Rue Jacques Prévert, 42980 Elattes",
+        "state": 0,
+        "electrodesExpiry": "2025-10-05"
+      },
+      {
+        "serial": "CLA123456789",
+        "locationName": "Gymnase Pierre Peyroche",
+        "locationAddr": "1Bis Place des Combattants, 42980 Elattes",
+        "state": 0,
+        "electrodesExpiry": "2025-10-05"
+      },
+      {
+        "serial": "CLA234567890",
+        "locationName": "École Municipale",
+        "locationAddr": "26 Rue Jacques Prévert, 42980 Elattes",
+        "state": 2,
+        "electrodesExpiry": "2025-10-05"
+      },
+      {
+        "serial": "CLA345678901",
+        "locationName": "Épicerie Samoreau",
+        "locationAddr": "17 Boulevard du Commandant Kelchmin, 42980 Elattes",
+        "state": 0,
+        "electrodesExpiry": "2025-10-05"
+      },
+      {
+        "serial": "CLA456789012",
+        "locationName": "Moussa&Telli Réparation Informatique",
+        "locationAddr": "90 Impasse des Cèdres, 42980 Elattes",
+        "state": 1,
+        "electrodesExpiry": "2025-10-05"
+      },
+      {
+        "serial": "CLA567890123",
+        "locationName": "Boucherie Boussal",
+        "locationAddr": "3 Rue Félidée, 42980 Elattes",
+        "state": 2,
+        "electrodesExpiry": "2025-10-05"
+      },
+      {
+        "serial": "CLA678901234",
+        "locationName": "Scierie Dubois&Fils",
+        "locationAddr": "649 Route de Lyon, 42980 Elattes",
+        "state": 0,
+        "electrodesExpiry": "2025-10-05"
+      },
+      {
+        "serial": "CLA789012345",
+        "locationName": "It'tif Coiffure Mixte",
+        "locationAddr": "19 Boulevard Lévy, 42980 Elattes",
+        "state": 0,
+        "electrodesExpiry": "2025-10-05"
+      },
+      {
+        "serial": "CLA890123456",
+        "locationName": "Ferme Sarbise Laine & Tricotée",
+        "locationAddr": "40 Route de Lyon 42980 Elattes",
+        "state": 0,
+        "electrodesExpiry": "2025-10-05"
+      },
+      {
+        "serial": "CLA901234567",
+        "locationName": "Garage Quérin-Gogheräuss",
+        "locationAddr": "12 Rue Jacques Prévert, 42980 Elattes",
+        "state": 0,
+        "electrodesExpiry": "2025-10-05"
+      },
+    ]
+
+  httpClientSpy.get.and.returnValue(of(expectedDefibrillators));
+
+  defibrillatorService.getAll().subscribe({
+    next: defibs => {
+      expect(defibs)
+        .withContext('expected defibrillators')
+        .toEqual(expectedDefibrillators);
+      done();
+    },
+    error: done.fail
   });
 });
