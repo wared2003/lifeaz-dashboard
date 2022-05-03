@@ -65,7 +65,7 @@ export class DefibrillatorService {
     {
       "serial": "CLA890123456",
       "locationName": "Ferme Sarbise Laine & Tricotée",
-      "locationAddr": "40 Route de Lyon 42980 Elattes",
+      "locationAddr": "40 Route de Lyon, 42980 Elattes",
       "state": 0,
       "electrodesExpiry": "2025-10-05"
     },

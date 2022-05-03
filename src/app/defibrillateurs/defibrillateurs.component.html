@@ -1,4 +1,4 @@
 <section class="defibrillateurs">
   <app-page-header [pageHeader]="pageHeader"></app-page-header>
-  <app-defibrillateurs-array class="defibrillateurs-array"></app-defibrillateurs-array>
+  <app-defibrillateurs-array class="defibrillateurs-array" *ngIf="! isMobile"></app-defibrillateurs-array>
 </section>
