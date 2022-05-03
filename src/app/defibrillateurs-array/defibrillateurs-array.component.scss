@@ -1,6 +1,7 @@
 //import variables
 @import "../../assets/styles/helpers/variables";
 @import "../../assets/styles/components/text";
+@import "../../assets/styles/components/toggleBtn";
 
 section{
   width: 895px;
@@ -22,4 +23,11 @@ section{
   row-gap: 28px;
   margin-top: 28px;
 
+}
+
+.filter-btn{
+  display: flex;width: 100%;
+  justify-content: center;
+  gap: 16px;
+  padding-bottom: 24px;
 }

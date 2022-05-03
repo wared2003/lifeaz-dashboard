@@ -1,4 +1,16 @@
 <section>
+
+<!--  status filter toggle btn-->
+  <div class="filter-btn">
+    <p>N'afficher que les défibrillateurs fonctionnels</p>
+    <div class="container" >
+      <label class="switch" [ngClass]="{'bg-lifeaz': filterActive}"><input type="checkbox" (click)="onFilterClick()"/>    <div></div>
+      </label>
+    </div>
+  </div>
+
+  <!--  status filter toggle end-->
+
   <div class="header">
     <p>numéro de série</p>
     <p>localisation</p>
