@@ -1,6 +1,17 @@
-<form>
-  <div class="button">
-    <p>Ajouter une photo</p>
-    <input type="file" (change)="onFileChanged($event)">
-  </div>
-</form>
+<section>
+  <app-page-header [pageHeader]="pageHeader"></app-page-header>
+
+  <form >
+    <div class="button" *ngIf="! selectedImage">
+      <p>Ajouter une photo</p>
+      <input type="file" (change)="onFileChanged($event)">
+    </div>
+  </form>
+  <img src="{{'http://192.168.86.37:5040/pictures/deffibrillatorsIssues/' + uploadedImageName}}" *ngIf="selectedImage">
+  <form class="description" #description="ngForm" (submit)="sendIssue(description)" *ngIf="selectedImage">
+    <p>Décriver le probleme</p>
+    <input type="textarea" ngModel name="text">
+    <input type="submit">
+  </form>
+</section>
+

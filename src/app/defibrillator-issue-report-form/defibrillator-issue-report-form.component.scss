@@ -2,8 +2,15 @@
 @import "../../assets/styles/helpers/variables";
 @import "../../assets/styles/components/text";
 
-/*inoly for phone*/
-div{
+/*only for phone*/
+
+section{
+  padding-top: 48px
+}
+
+
+// add picture button customisation
+div.button{
   @extend .small-title;
   font-size: 14px;
   color: $white;
@@ -17,7 +24,7 @@ div{
   width: 60%;
   margin: 24px auto;
   background-color: $lifeaz-blue;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   position: relative;
 }
@@ -30,4 +37,14 @@ input[type="file"]{
   cursor: pointer;
   display: block;
   opacity: 0;
+}
+
+img {
+  display: block;
+  max-height: 200px;
+  margin: 24px auto;
+  border-radius: 5px;
+  border: solid 4px $lifeaz-blue;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+
 }

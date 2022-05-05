@@ -14,6 +14,7 @@ import { MobileDefibrillatorsCardsArrayComponent } from './mobile-defibrillators
 import {HttpClientModule} from "@angular/common/http";
 import { DefibrillatorIssueReportFormComponent } from './defibrillator-issue-report-form/defibrillator-issue-report-form.component';
 import { DefibrillatorIssueReportFormTextFormComponent } from './defibrillator-issue-report-form-text-form/defibrillator-issue-report-form-text-form.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -29,12 +30,13 @@ import { DefibrillatorIssueReportFormTextFormComponent } from './defibrillator-i
     DefibrillatorIssueReportFormComponent,
     DefibrillatorIssueReportFormTextFormComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        FormsModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
