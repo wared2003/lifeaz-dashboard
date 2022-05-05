@@ -7,11 +7,11 @@
       <input type="file" (change)="onFileChanged($event)">
     </div>
   </form>
-  <img src="{{'http://192.168.86.37:5040/pictures/deffibrillatorsIssues/' + uploadedImageName}}" *ngIf="selectedImage">
-  <form class="description" #description="ngForm" (submit)="sendIssue(description)" *ngIf="selectedImage">
+  <img src="{{'http://192.168.86.37:5040/pictures/deffibrillatorsIssues/' + uploadedImageName}}" *ngIf="selectedImage && ! reportSended">
+  <form class="description" #description="ngForm" (submit)="sendIssue(description)" *ngIf="selectedImage && ! reportSended">
     <p>Décriver le probleme</p>
-    <input type="textarea" ngModel name="text">
-    <input type="submit">
+    <textarea type="textarea" ngModel name="text" placeholder="raconte nous le problème"></textarea>
+    <input type="submit" class="button--submit">
   </form>
-</section>
 
+</section>

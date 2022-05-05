@@ -16,6 +16,7 @@ export class DefibrillatorIssueReportFormComponent implements OnInit {
   defibrillatorId!: number;
   selectedImage!: File;
   uploadedImageName!: string;
+  reportSended: boolean = false;
 
   pageHeader: PageHeader = {
     title : "Declarer Un Problème",
@@ -51,7 +52,11 @@ export class DefibrillatorIssueReportFormComponent implements OnInit {
 
     console.log(form.value)
     return this.defibrillatorIssueService.addIssue(issue).subscribe((response: any) => {
-      console.log(response);
+      this.pageHeader = {
+        title : "Merci",
+        subtitle: "Nous avons bien reçu votre signalement"
+      };
+      this.reportSended = true;
     });
   }
 }
