@@ -16,6 +16,8 @@ import {
 export class NavigationMenuComponent implements OnInit{
 
   isOpen: boolean = false;
+  urlpath: string = window.location.pathname
+
   constructor() {
   }
 
@@ -29,6 +31,12 @@ export class NavigationMenuComponent implements OnInit{
     }else{
       this.isOpen = true
     }
+  }
+
+
+
+  refreshUrlPath(){
+    this.urlpath = window.location.pathname;
   }
 
 }

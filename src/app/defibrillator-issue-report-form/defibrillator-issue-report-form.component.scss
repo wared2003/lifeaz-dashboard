@@ -1,0 +1,33 @@
+//import
+@import "../../assets/styles/helpers/variables";
+@import "../../assets/styles/components/text";
+
+/*inoly for phone*/
+div{
+  @extend .small-title;
+  font-size: 14px;
+  color: $white;
+  font-weight: $fw-black;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 50px;
+  border-radius: 25px;
+  width: 60%;
+  margin: 24px auto;
+  background-color: $lifeaz-blue;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  position: relative;
+}
+
+input[type="file"]{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  display: block;
+  opacity: 0;
+}

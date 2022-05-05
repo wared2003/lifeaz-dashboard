@@ -13,6 +13,6 @@ export class DefibrillatorService {
   }
 
   getAll(): Observable<Defibrillator[]> {
-    return this.http.get<Defibrillator[]>('http://localhost:5050/api/defibrillators')   // get all defibrillators
+    return this.http.get<Defibrillator[]>('http://192.168.86.37:5040/api/defibrillators')   // get all defibrillators
   }
 }

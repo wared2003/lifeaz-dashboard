@@ -15,10 +15,10 @@
         <img src="./assets/graphique/icons/flash.svg" alt="electricity flash icon" class="flash-icon">
         <p>matériel</p>
         <img src="./assets/graphique/icons/downArrow.svg" alt="down arrow icon" class="down-arrow-icon">
-      </div>
-        <div class="toggled-items" id="toggledItems" [ngClass]="{'open': isOpen}">
-          <a routerLink="/" class="active">défibrillateurs</a>
-          <a routerLink="commandes">commandes</a>
+      </div >
+        <div class="toggled-items" id="toggledItems" [ngClass]="{'open': isOpen}" (click)="refreshUrlPath()">
+          <a routerLink="/" [ngClass]="{'active': urlpath == '/'}">défibrillateurs</a>
+          <a routerLink="commandes"  [ngClass]="{'active': urlpath == '/commandes'}">commandes</a>
         </div>
 
     </div>

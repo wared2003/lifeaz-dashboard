@@ -12,6 +12,8 @@ import { DefibrillateursArrayRowComponent } from './defibrillateurs-array-row/de
 import { MobileDefibrillatorCardComponent } from './mobile-defibrillator-card/mobile-defibrillator-card.component';
 import { MobileDefibrillatorsCardsArrayComponent } from './mobile-defibrillators-cards-array/mobile-defibrillators-cards-array.component';
 import {HttpClientModule} from "@angular/common/http";
+import { DefibrillatorIssueReportFormComponent } from './defibrillator-issue-report-form/defibrillator-issue-report-form.component';
+import { DefibrillatorIssueReportFormTextFormComponent } from './defibrillator-issue-report-form-text-form/defibrillator-issue-report-form-text-form.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import {HttpClientModule} from "@angular/common/http";
     DefibrillateursArrayComponent,
     DefibrillateursArrayRowComponent,
     MobileDefibrillatorCardComponent,
-    MobileDefibrillatorsCardsArrayComponent
+    MobileDefibrillatorsCardsArrayComponent,
+    DefibrillatorIssueReportFormComponent,
+    DefibrillatorIssueReportFormTextFormComponent
   ],
   imports: [
     BrowserModule,
